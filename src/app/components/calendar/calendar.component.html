@@ -1,0 +1,77 @@
+<div class="body">
+  <div class="container">
+
+    <div class="calendar-container">
+
+      <header>
+
+        <div class="day">{{ today }}</div>
+        <div class="month">{{ month }}</div>
+
+        <img class="my-note" src="../../../assets/img/calendar/paper.svg" alt="">
+
+        <div class="mensaje-nota">
+          <h3>Entrenamientos</h3>
+          <p>Lunes y Viernes</p>
+          <p>21:20 a 22:50</p>
+        </div>
+
+      </header>
+
+      <table class="calendar">
+
+        <thead>
+
+          <tr>
+
+            <td>Lun</td>
+            <td>Mar</td>
+            <td>Mie</td>
+            <td>Jue</td>
+            <td>Vie</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+
+          </tr>
+
+        </thead>
+
+        <tbody id="body-table">
+
+        </tbody>
+
+      </table>
+
+      <div class="ring-left"></div>
+      <div class="ring-right"></div>
+
+    </div> <!-- end calendar-container -->
+
+    <div class="my-events">
+      <img *ngFor="let gancho of [1,1,1,1,1,1,1,1,1,1]; let i = index" class="gancho"
+        src="../../../assets/img/calendar/gancho-dark.png" alt="" [style.left.px]="(i*38+5)+''">
+      <hr *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
+
+      <p class="body-lib">
+        <span class="titulo">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Actividades
+        </span>
+
+        <br>
+        <br>
+
+        <span *ngFor="let item of [1]; let i = index">
+          <i class="fas fa-chevron-right"></i>
+          <span class="listado" [style.color]="listadoColores[i]" uk-tooltip="Para el 02 de Marzo">
+            Inicio de actividades del año 2020
+          </span>
+          <br>
+        </span>
+      </p>
+
+      <hr class="my-margen">
+    </div>
+
+  </div> <!-- end container -->
+</div>

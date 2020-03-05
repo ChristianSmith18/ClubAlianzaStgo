@@ -1,0 +1,231 @@
+// :host ::ng-deep {elementoCSS} --> sirve para cuando no toma el css. Lo inyecta en el host
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.body {
+  background: #ccc;
+  font: 87.5%/1.5em 'Lato', sans-serif;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  min-width: 394px;
+  max-width: 394.1px;
+}
+
+:host ::ng-deep td {
+  padding: 0;
+  transition: color ease-in-out .2s;
+}
+
+.container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+}
+
+.calendar-container {
+  position: relative;
+  width: 450px;
+  margin-top: 100px;
+}
+
+.calendar-container header {
+  border-radius: 1em 1em 0 0;
+  background: #29335C;
+  color: #fff;
+  padding: 3em 2em;
+}
+
+.day {
+  font-size: 8em;
+  font-weight: 900;
+  line-height: 1em;
+  color: #F3A712;
+}
+
+.month {
+  font-size: 4em;
+  line-height: 1em;
+  text-transform: lowercase;
+  color: #F3A712;
+}
+
+.calendar {
+  background: #fff;
+  border-radius: 0 0 1em 1em;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  color: #555;
+  display: inline-block;
+  padding: 2em;
+}
+
+.calendar thead {
+  color: #F3A712;
+  font-family: 'Bree Serif', ;
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+:host ::ng-deep .calendar td {
+  padding: 4px 1em;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+:host ::ng-deep .current-day {
+  color: #29335C;
+
+  i {
+    color: red;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    transition: color ease-in-out .3s;
+  }
+}
+
+:host ::ng-deep .calendar tbody#body-table td:hover {
+  background: #cacaca;
+  color: #fff;
+
+  i {
+    color: #282bf1;
+  }
+}
+
+:host ::ng-deep .other-month {
+  color: #cacaca;
+}
+
+:host ::ng-deep .ring-left,
+:host ::ng-deep .ring-right {
+  position: absolute;
+  top: 230px;
+}
+
+:host ::ng-deep .ring-left {
+  left: 2em;
+}
+
+:host ::ng-deep .ring-right {
+  right: 2em;
+}
+
+:host ::ng-deep .ring-left:before,
+:host ::ng-deep .ring-left:after,
+:host ::ng-deep .ring-right:before,
+:host ::ng-deep .ring-right:after {
+  background: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+  content: "";
+  display: inline-block;
+  margin: 8px;
+  height: 32px;
+  width: 8px;
+}
+
+:host ::ng-deep thead>tr>td {
+  cursor: default;
+}
+
+.my-note {
+  position: absolute;
+  width: 185px;
+  top: 20px;
+  right: 25px;
+}
+
+.mensaje-nota {
+  position: absolute;
+  top: 92px;
+  right: 40px;
+  text-align: center;
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+
+  h3 {
+    color: #29335C;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  p {
+    color: #29335C;
+    margin: 0;
+    font-weight: bold;
+    font-size: .8rem;
+  }
+}
+
+.my-events {
+  background: #fff;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+  color: #555;
+  display: inline-block;
+  margin-top: 102px;
+  margin-left: 35px;
+  width: 400px;
+  height: 510px;
+  position: relative;
+
+  img.gancho {
+    position: absolute;
+    top: -14px;
+    width: 50px;
+    z-index: 9;
+  }
+
+  .my-margen {
+    position: absolute;
+    width: 510px;
+    transform: rotate(90deg);
+    border: 1.2px solid red;
+    top: 238px;
+    left: -225px;
+  }
+
+  .body-lib {
+    position: absolute;
+    font-size: 1.3rem;
+    top: 18px;
+    left: 40px;
+    font-family: 'Acme', ;
+    color: #555555;
+
+    span.titulo {
+      color: #29335C;
+      text-shadow: 2px 2px #ffe600e1;
+      font-size: 2.2rem;
+      z-index: 9;
+    }
+
+    span>span.listado {
+      transition: opacity ease-in-out .2s;
+      cursor: pointer;
+    }
+
+    span>span.listado:hover {
+      opacity: .6;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+div.myNavbar {
+  width: 100vw;
+  height: 90px;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  nav {
+    background-color: #3075b1e1 !important; //123E65
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  ul>li>a {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-family: 'Roboto Condensed', ;
+    transition: all ease-in-out .3s;
+  }
+
+  ul>li>a:hover {
+    color: #ffe600e1;
+    text-shadow: 2px 2px #00000030;
+  }
+}
+
+.uk-active {
+  color: #ffe600 !important;
+  text-shadow: 2px 2px #00000030 !important;
+}
+
+.uk-navbar-left>img,
+.uk-navbar-right>img {
+  height: 14vh;
+  // min-height: 80px;
+  border-radius: 50%;
+  margin: 5px;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: transform ease-in-out .3s;
+}
+
+.uk-navbar-left>img:hover {
+  transform: rotate(-20deg);
+}
+
+.uk-navbar-right>img {
+  margin: 5px;
+  margin-right: 30px;
+}
+
+.uk-navbar-right>img:hover {
+  transform: rotate(20deg);
+}
+
+@media (max-width: 1200px) {
+  nav {
+    div:nth-child(2)>ul>li>a {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  nav {
+    div:nth-child(2)>ul>li>a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  nav {
+    div:nth-child(2)>ul>li>a {
+      font-size: .9rem;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  nav {
+    div:nth-child(2)>ul>li>a {
+      font-size: 1rem;
+    }
+
+    div:nth-child(2)>ul>li {
+      margin: auto -10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    div:nth-child(2)>ul>li>a {
+      font-size: .9rem;
+    }
+
+    div:nth-child(2)>ul>li {
+      margin: auto -10px;
+    }
+  }
+}
+
+.uk-navbar-right>button {
+  margin-right: 30px;
+  background-color: white;
+  font-weight: bold;
+  border-radius: .5rem;
+  -webkit-box-shadow: 10px 10px 59px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 59px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 59px -13px rgba(0, 0, 0, 0.75);
+}
+
+button.uk-offcanvas-close {
+  transform: scale(1.5);
+}
+
+@media (max-width: 840px) {
+  .uk-navbar-left>img {
+    height: 9vh;
+    margin: 5px;
+  }
+}
