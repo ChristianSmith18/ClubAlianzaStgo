@@ -111,13 +111,41 @@ div.myNavbar {
   box-shadow: 10px 10px 59px -13px rgba(0, 0, 0, 0.75);
 }
 
+ul.uk-nav {
+  list-style-type: disc;
+
+  li {
+    margin-left: 20px;
+  }
+}
+
 button.uk-offcanvas-close {
   transform: scale(1.5);
 }
 
 @media (max-width: 840px) {
-  .uk-navbar-left>img {
+
+  .uk-navbar-left>img,
+  .uk-navbar-right>img {
     height: 9vh;
     margin: 5px;
+  }
+}
+
+.for-desktop {
+  display: block;
+}
+
+.for-mobile {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  .for-desktop {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
   }
 }

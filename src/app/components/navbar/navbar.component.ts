@@ -12,8 +12,13 @@ export class NavbarComponent implements AfterContentChecked {
   constructor() { }
 
   ngAfterContentChecked() {
+    const path = window.location.pathname.split('/')[1];
     if (this.keyAfterContentChecked) {
-      document.getElementById(window.location.pathname.split('/')[1]).classList.add('uk-active');
+      if (window.innerWidth > 740) {
+        document.getElementById('desktop-' + path).classList.add('uk-active');
+      } else {
+        document.getElementById('mobile-' + path).classList.add('uk-active');
+      }
       this.keyAfterContentChecked = false;
     }
   }
