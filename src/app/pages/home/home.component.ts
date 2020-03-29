@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { HomeDataService } from 'src/app/services/home-data.service';
+import { HomeRootData, Portadas } from 'src/app/models/home-data.interface';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -6,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  portadas: Portadas[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(
+    private home: HomeDataService
+  ) {
+    this.home.getPortadas().subscribe(
+      (data: HomeRootData) => {
+        this.portadas = data.portadas;
+      }
+    );
   }
-
 }

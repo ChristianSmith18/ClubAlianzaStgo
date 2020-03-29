@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./inscription.component.scss']
 })
 export class InscriptionComponent {
-  areas = ['Personal'];
 
   constructor() { }
 

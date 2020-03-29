@@ -1,0 +1,60 @@
+.uk-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  width: 80%;
+  margin-bottom: 20px;
+  border-top-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  -webkit-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+
+  ul {
+
+    li {
+      text-align: justify;
+      width: 45%;
+    }
+  }
+}
+
+h1.uk-heading-bullet,
+h4.uk-comment-title {
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+div.uk-flex-row:nth-child(odd) {
+  text-align: right;
+}
+
+.m-l-55 {
+  margin-left: 55%;
+}
+
+li.non-style {
+  list-style: none;
+}
+
+article.bound-left {
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+}
+
+article.bound-right {
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+
+hr.uk-divider-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 60vw;
+}
+
+article {
+  background-color: #e7e7e7;
+}

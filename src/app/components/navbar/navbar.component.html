@@ -13,7 +13,8 @@
       <ul class="uk-navbar-nav">
         <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a id="desktop-home"
             (click)="changePath('home')">Inicio</a></li>
-        <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a href="#">¿Quiénes somos?</a></li>
+        <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a id="desktop-about"
+            (click)="changePath('about')">¿Quiénes somos?</a></li>
         <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a id="desktop-calendar"
             (click)="changePath('calendar')">Calendario</a></li>
         <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a id="desktop-inscription"
@@ -62,7 +63,8 @@
       <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-home"
           (click)="changePath('home')">Inicio</a>
       </li>
-      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a href="#">¿Quiénes somos?</a></li>
+      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-about"
+          (click)="changePath('about')">¿Quiénes somos?</a></li>
       <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-calendar"
           (click)="changePath('calendar')">Calendario</a></li>
       <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-inscription"

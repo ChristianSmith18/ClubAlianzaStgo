@@ -9,6 +9,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { HomeDataService } from './services/home-data.service';
+import { AboutComponent } from './pages/about/about.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +23,18 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
     SocialBarComponent,
     HomeComponent,
     CalendarComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    HomeDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

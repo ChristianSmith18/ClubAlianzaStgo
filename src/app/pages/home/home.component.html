@@ -1,51 +1,26 @@
-<div class="my-slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+<div *ngIf="portadas" class="my-slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
   uk-slideshow="animation: pull; min-height: 300; max-height: 490; autoplay: true; autoplay-interval: 6500">
 
   <div style="background-color: whitesmoke; padding: 20px;">
     <ul class="uk-slideshow-items" style="cursor: move;">
-      <li>
+      <li *ngFor="let portada of portadas">
         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-center">
-          <img src="../../../assets/img/slider/slider3.jpg" alt="" uk-cover>
+          <img [src]="portada.url" alt="" uk-cover>
           <div class="my-bg-img"></div>
         </div>
         <div class="uk-position-center uk-position-small uk-text-center">
           <h2 class="my-title-slide" uk-slideshow-parallax="x: 100, -100">
-            &nbsp;&nbsp;Preparándonos&nbsp;&nbsp;
+            &nbsp;&nbsp;{{ portada.titulo }}&nbsp;&nbsp;
           </h2>
-          <p class="my-subtitle-slide" uk-slideshow-parallax="x: 200, -200">Con todo para retomar el 2 marzo del 2020</p>
-        </div>
-      </li>
-      <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-center">
-          <div class="my-bg-img"></div>
-          <img src="../../../assets/img/slider/slider1.jpg" alt="" uk-cover>
-        </div>
-        <div class="uk-position-center uk-position-small uk-text-center">
-          <h2 class="my-title-slide" uk-slideshow-parallax="y: -50, 0, 0">
-            &nbsp;&nbsp;Club Alianza Santiago&nbsp;&nbsp;
-          </h2>
-          <p class="my-subtitle-slide" uk-slideshow-parallax="y: 50, 0, 0">Campeones del torneo organizado en Cunaco</p>
-        </div>
-      </li>
-      <li>
-        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-center">
-          <img src="../../../assets/img/slider/slider2.jpg" alt="" uk-cover>
-          <div class="my-bg-img"></div>
-        </div>
-        <div class="uk-position-center uk-position-small uk-text-center">
-          <h2 class="my-title-slide" uk-slideshow-parallax="x: 100, -100">
-            &nbsp;&nbsp;Club Alianza Santiago&nbsp;&nbsp;
-          </h2>
-          <p class="my-subtitle-slide" uk-slideshow-parallax="x: -100, 100">Campeonas del torneo organizado en Cunaco
-          </p>
+          <p class="my-subtitle-slide" uk-slideshow-parallax="x: 200, -200">{{ portada.subtitulo }}</p>
         </div>
       </li>
     </ul>
 
     <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous
       uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next
-      uk-slideshow-item="next"></a>
+    <a id="next" class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#"
+      uk-slidenav-next uk-slideshow-item="next"></a>
   </div>
 
 
