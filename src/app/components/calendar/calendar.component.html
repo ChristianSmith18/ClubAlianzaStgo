@@ -61,10 +61,11 @@
         <br>
         <br>
 
-        <span *ngFor="let item of [1]; let i = index">
+        <span *ngFor="let evento of eventosDelMes; let i = index">
           <i class="fas fa-chevron-right"></i>
-          <span class="listado" [style.color]="listadoColores[i]" uk-tooltip="Para el 02 de Marzo">
-            Inicio de actividades del año 2020
+          <span [ngClass]="{'tachado': validate(evento.day)}" class="listado" [style.color]="listadoColores[i]"
+            [attr.uk-tooltip]="'Para el ' + formatDay(evento.day, i) + ' de Marzo'">
+            {{ evento.event }}
           </span>
           <br>
         </span>

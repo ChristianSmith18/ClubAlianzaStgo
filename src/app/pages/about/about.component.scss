@@ -33,6 +33,14 @@ div.uk-flex-row:nth-child(odd) {
   margin-left: 55%;
 }
 
+hr.uk-divider-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 60vw;
+}
+
 li.non-style {
   list-style: none;
 }
@@ -47,14 +55,76 @@ article.bound-right {
   border-bottom-right-radius: 1.2rem;
 }
 
-hr.uk-divider-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  width: 60vw;
-}
-
 article {
   background-color: #e7e7e7;
+}
+
+.m-t-subs-10 {
+  margin-top: -10vh;
+}
+
+.m-t-subs-18 {
+  margin-top: -18vh;
+}
+
+.fix-title-team {
+  display: none;
+}
+
+@media (max-width: 870px) {
+  div.uk-flex-row:nth-child(odd) {
+    text-align: left;
+  }
+
+  .m-l-55 {
+    margin-left: 0;
+  }
+
+  hr.uk-divider-icon {
+    display: none;
+  }
+
+  .uk-card {
+
+    ul {
+
+      li {
+        width: 95%;
+      }
+    }
+  }
+
+  .m-t-subs-10 {
+    margin-top: 0;
+  }
+
+  .m-t-subs-18 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 510px) {
+  .uk-heading-bullet {
+    font-size: 1.6rem;
+  }
+
+  ul {
+
+    li {
+      font-size: 10px;
+    }
+  }
+
+  a.uk-link-reset {
+    font-size: .8rem;
+    font-weight: bold;
+  }
+
+  .fix-title-team-show {
+    display: none;
+  }
+
+  .fix-title-team {
+    display: initial;
+  }
 }

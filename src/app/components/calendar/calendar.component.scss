@@ -11,6 +11,7 @@
   background: #ccc;
   font: 87.5%/1.5em 'Lato', sans-serif;
   margin: 0;
+  transition: all ease-in-out .5s;
 }
 
 table {
@@ -22,6 +23,7 @@ table {
 
 :host ::ng-deep td {
   padding: 0;
+  position: relative;
   transition: color ease-in-out .2s;
 }
 
@@ -227,5 +229,61 @@ table {
     span>span.listado:hover {
       opacity: .6;
     }
+  }
+}
+
+.tachado {
+  text-decoration: line-through !important;
+}
+
+@media (max-width: 890px) {
+  .body {
+    transform: scale(.9);
+    margin-top: 36vh;
+  }
+}
+
+@media (max-width: 810px) {
+  .body {
+    transform: scale(.8);
+    margin-top: 38vh;
+  }
+}
+
+@media (max-width: 730px) {
+  .body {
+    transform: scale(.7);
+    margin-top: 40vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .body {
+    transform: scale(.6);
+    margin-top: 42vh;
+  }
+}
+
+@media (max-width: 540px) {
+  .body {
+    transform: scale(.5);
+    margin-top: 44vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .body {
+    transform: scale(0.55);
+    margin-top: 46vh;
+  }
+
+  .calendar-container {
+    position: absolute;
+    top: -380px;
+  }
+
+  .my-events {
+    position: relative;
+    top: 165px;
   }
 }

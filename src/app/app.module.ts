@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { HomeDataService } from './services/home-data.service';
 import { AboutComponent } from './pages/about/about.component';
+import { CalendarDataService } from './services/calendar-data.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AboutComponent } from './pages/about/about.component';
     AngularFirestoreModule
   ],
   providers: [
-    HomeDataService
+    HomeDataService,
+    CalendarDataService
   ],
   bootstrap: [AppComponent]
 })
