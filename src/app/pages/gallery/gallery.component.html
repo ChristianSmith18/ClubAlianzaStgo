@@ -1,0 +1,43 @@
+<div *ngIf="imagenes" class="uk-card uk-card-default uk-card-body">
+  <p class="title">Nuestra Galería</p>
+  <div uk-grid uk-lightbox="animation: scale">
+    <div class="img-container uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-width-1-5@xl"
+      *ngFor="let imagen of imagenes">
+      <a [href]="imagen.link" [attr.data-caption]="imagen.title" [attr.data-type]="imagen.type">
+        <img class="gallery" [src]="imagen.link" alt="">
+      </a>
+    </div>
+  </div>
+
+  <div class="container-device">
+    <p class="title">Apóyanos en Nuestras Redes Sociales</p>
+    <div class="device device-iphone-x">
+      <div class="device-frame">
+        <a href="https://www.instagram.com/clubalianzasantiago/?hl=es-la" target="_blank">
+          <img class="device-content" src="../../../assets/img/mobile/insta-for-mobile.png">
+        </a>
+      </div>
+      <div class="device-stripe"></div>
+      <div class="device-header"></div>
+      <div class="device-sensors"></div>
+      <div class="device-btns"></div>
+      <div class="device-power"></div>
+    </div>
+
+    <div class="device device-imac-pro">
+      <div class="device-frame">
+        <a href="https://www.facebook.com/alianza.santiago.315" target="_blank">
+          <img class="device-content" src="../../../assets/img/mobile/fb-for-desktop.png">
+        </a>
+      </div>
+      <div class="device-stripe"></div>
+      <div class="device-header"></div>
+      <div class="device-sensors"></div>
+      <div class="device-btns"></div>
+      <div class="device-power"></div>
+    </div>
+  </div>
+</div>
+
+<app-loading *ngIf="!imagenes" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+</app-loading>

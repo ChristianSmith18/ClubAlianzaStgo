@@ -16,6 +16,11 @@ import { environment } from 'src/environments/environment';
 import { HomeDataService } from './services/home-data.service';
 import { AboutComponent } from './pages/about/about.component';
 import { CalendarDataService } from './services/calendar-data.service';
+import { LoadingComponent } from './components/loading/loading.component';
+import { SponsorsComponent } from './pages/sponsors/sponsors.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GalleryDataService } from './services/gallery-data.service';
+import { LocationComponent } from './pages/location/location.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,11 @@ import { CalendarDataService } from './services/calendar-data.service';
     HomeComponent,
     CalendarComponent,
     InscriptionComponent,
-    AboutComponent
+    AboutComponent,
+    LoadingComponent,
+    SponsorsComponent,
+    GalleryComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,8 @@ import { CalendarDataService } from './services/calendar-data.service';
   ],
   providers: [
     HomeDataService,
-    CalendarDataService
+    CalendarDataService,
+    GalleryDataService
   ],
   bootstrap: [AppComponent]
 })

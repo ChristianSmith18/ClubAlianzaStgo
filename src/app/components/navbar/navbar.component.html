@@ -19,9 +19,12 @@
             (click)="changePath('calendar')">Calendario</a></li>
         <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a id="desktop-inscription"
             (click)="changePath('inscription')">Inscripción</a></li>
-        <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a href="#">Auspiciadores</a></li>
-        <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a href="#">Galería</a></li>
-        <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a href="#">¿Dónde nos encontramos?</a></li>
+        <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a id="desktop-sponsors"
+            (click)="changePath('sponsors')">Auspiciadores</a></li>
+        <li uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"><a id="desktop-gallery"
+            (click)="changePath('gallery')">Galería</a></li>
+        <li uk-scrollspy="cls: uk-animation-slide-top; repeat: true"><a id="desktop-location"
+            (click)="changePath('location')">¿Dónde nos encontramos?</a></li>
       </ul>
 
     </div>
@@ -69,9 +72,12 @@
           (click)="changePath('calendar')">Calendario</a></li>
       <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-inscription"
           (click)="changePath('inscription')">Inscripción</a></li>
-      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a href="#">Auspiciadores</a></li>
-      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a href="#">Galería</a></li>
-      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a href="#">¿Dónde nos encontramos?</a></li>
+      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-sponsors"
+          (click)="changePath('sponsors')">Auspiciadores</a></li>
+      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-gallery"
+          (click)="changePath('gallery')">Galería</a></li>
+      <li uk-scrollspy="cls: uk-animation-slide-right repeat: true"><a id="mobile-location"
+          (click)="changePath('location')">¿Dónde nos encontramos?</a></li>
     </ul>
 
   </div>

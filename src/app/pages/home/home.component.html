@@ -23,5 +23,12 @@
       uk-slidenav-next uk-slideshow-item="next"></a>
   </div>
 
-
 </div>
+
+<div *ngIf="portadas" class="uk-card uk-card-default uk-card-body">
+  <h3 class="uk-heading-bullet uk-card-title uk-margin-medium">Nuestros Auspiciadores</h3>
+  <img src="../../../assets/img/examples/patrocinadores.JPG" alt="Patrocinadores">
+</div>
+
+<app-loading *ngIf="!portadas" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+</app-loading>

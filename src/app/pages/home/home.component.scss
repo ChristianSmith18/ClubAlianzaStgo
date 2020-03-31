@@ -1,5 +1,5 @@
 .my-slider {
-  padding: 25px 100px;
+  padding: 25px 90px;
   padding-bottom: 10px;
 
   ul {
@@ -9,7 +9,7 @@
 
 #photo-style {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 16px;
 }
 
 [uk-slideshow-item="previous"],
@@ -55,7 +55,25 @@ p.my-subtitle-slide {
   background-color: #00000060;
   position: absolute;
   z-index: 1;
+}
 
+.uk-card {
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 28px 0;
+  max-width: 720px;
+  width: 70%;
+  border-top-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  -webkit-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+
+  h3 {
+    font-family: 'Baloo Thambi 2', cursive;
+    text-align: center;
+    font-size: 2.6rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -70,11 +88,23 @@ p.my-subtitle-slide {
   [uk-slideshow-item="next"] {
     margin-right: 100px;
   }
+
+  .uk-card {
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 @media (max-width: 650px) {
   .my-slider {
     padding: 25px 60px;
+  }
+
+  .uk-card {
+    h3 {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -89,6 +119,10 @@ p.my-subtitle-slide {
 
   [uk-slideshow-item="next"] {
     margin-right: 60px;
+  }
+
+  .uk-card {
+    width: 90vw;
   }
 }
 
@@ -116,5 +150,21 @@ p.my-subtitle-slide {
 
   [uk-slideshow-item="next"] {
     display: none;
+  }
+}
+
+@media (max-width: 515px) {
+  .uk-card {
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 515px) {
+  .uk-card {
+    h3 {
+      font-size: 1.6rem;
+    }
   }
 }

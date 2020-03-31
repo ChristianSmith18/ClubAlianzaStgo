@@ -12,6 +12,7 @@ export class CalendarComponent implements AfterContentChecked {
   keyAfterContentChecked = true;
   myday = new Date().getDate();
   today = ((this.myday + '').length > 1) ? ('' + this.myday) : ('0' + this.myday);
+  showAll = false;
 
   meses = [
     'enero',
@@ -81,6 +82,8 @@ export class CalendarComponent implements AfterContentChecked {
             break;
           }
         }
+
+        this.showAll = true;
       }
     );
   }

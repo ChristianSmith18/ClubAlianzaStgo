@@ -1,0 +1,107 @@
+.uk-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+  width: 80%;
+  margin-bottom: 20px;
+  border-top-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  -webkit-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 4px 38px -5px rgba(0, 0, 0, 0.75);
+
+  ul {
+
+    li {
+      text-align: justify;
+      width: 45%;
+    }
+  }
+}
+
+
+p.title {
+  font-size: 2.8rem;
+  text-align: center;
+  font-family: 'Calistoga', cursive;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+p.title-question {
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Calistoga", cursive;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+h4.title-sponsor {
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+p.description {
+  text-align: justify;
+}
+
+@media (max-width: 720px) {
+  p.title {
+    font-size: 2.2rem;
+  }
+
+  h4.title-sponsor {
+    font-size: 1.2rem;
+  }
+
+  p.description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 570px) {
+  p.title {
+    font-size: 1.8rem;
+  }
+
+  h4.title-sponsor {
+    font-size: 1.3rem;
+  }
+
+  p.description {
+    font-size: 1.1rem;
+  }
+
+  .title-question {
+    font-size: 1.3rem;
+  }
+
+  .subtitle-question {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .title-question {
+    font-size: 1.1rem;
+  }
+
+  .uk-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 430px) {
+  p.title {
+    font-size: 1.5rem;
+  }
+
+  h4.title-sponsor {
+    font-size: 1.3rem;
+  }
+
+  p.description {
+    font-size: .9rem;
+  }
+}
