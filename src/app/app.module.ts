@@ -21,6 +21,7 @@ import { SponsorsComponent } from './pages/sponsors/sponsors.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GalleryDataService } from './services/gallery-data.service';
 import { LocationComponent } from './pages/location/location.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LocationComponent } from './pages/location/location.component';
     LoadingComponent,
     SponsorsComponent,
     GalleryComponent,
-    LocationComponent
+    LocationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

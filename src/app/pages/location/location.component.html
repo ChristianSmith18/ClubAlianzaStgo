@@ -1,1 +1,19 @@
-<p>location works!</p>
+<div class="uk-card uk-card-default uk-card-body card-primary">
+  <div class="uk-card uk-card-default uk-card-body">
+    <p class="title">¿Dónde encontrarnos?</p>
+    <p class="location uk-text-center">Ven a entrenar con nosotros, estamos ubicados en el polideportivo de Ñuñoa, calle
+      Juan Moya Morales 1370, Ñuñoa, Región Metropolitana.</p>
+
+    <div uk-grid uk-lightbox="animation: scale">
+      <div *ngFor="let item of [1,1,1]; let i = index;"
+        class="img-container uk-width-1-1@s uk-width-1-2@m uk-width-1-2@l">
+        <a [href]="'../../../assets/img/gym/polideportivo' + (i+1) + '.jpg'" data-caption="Polideportivo de Ñuñoa"
+          data-type=" image">
+          <img class="gallery" [src]="'../../../assets/img/gym/polideportivo' + (i+1) + '.jpg'"
+            alt="Polideportivo de Ñuñoa">
+        </a>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

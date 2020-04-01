@@ -105,3 +105,60 @@ p.description {
     font-size: .9rem;
   }
 }
+
+// For footer
+app-footer {
+  position: absolute;
+  width: 99.6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 70px;
+}
+
+@media (max-width: 1125px) {
+  app-footer {
+    width: 99.5vw;
+  }
+}
+
+@media (max-width: 1005px) {
+  app-footer {
+    width: 99.4vw;
+  }
+}
+
+@media (max-width: 836px) {
+  app-footer {
+    width: 99.3vw;
+  }
+}
+
+@media (max-width: 718px) {
+  app-footer {
+    width: 99.2vw;
+  }
+}
+
+@media (max-width: 630px) {
+  app-footer {
+    width: 99vw;
+  }
+}
+
+@media (max-width: 505px) {
+  app-footer {
+    width: 98.8vw;
+  }
+}
+
+@media (max-width: 415px) {
+  app-footer {
+    width: 98.6vw;
+  }
+}
+
+@media (max-width: 360px) {
+  app-footer {
+    width: 98.4vw;
+  }
+}
