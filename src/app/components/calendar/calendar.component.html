@@ -64,7 +64,7 @@
         <span *ngFor="let evento of eventosDelMes; let i = index">
           <i class="fas fa-chevron-right"></i>
           <span [ngClass]="{'tachado': validate(evento.day)}" class="listado" [style.color]="listadoColores[i]"
-            [attr.uk-tooltip]="'Para el ' + formatDay(evento.day, i) + ' de Marzo'">
+            [attr.uk-tooltip]="'Para el ' + formatDay(evento.day, i) + ' de ' + month">
             {{ evento.event }}
           </span>
           <br>
